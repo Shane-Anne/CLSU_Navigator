@@ -1,11 +1,11 @@
 CREATE TABLE venue (
-    venueId INT AUTO_INCREMENT PRIMARY KEY,
-    buildingId INT NULL,
+    venue_Id INT AUTO_INCREMENT PRIMARY KEY,
+    building_Id INT NULL,
     name VARCHAR(150) NOT NULL,
     description TEXT,
     location VARCHAR(255),
-    FOREIGN KEY (buildingId)
-        REFERENCES building(buildingId)
+    FOREIGN KEY (building_Id)
+        REFERENCES building(building_Id)
         ON UPDATE CASCADE
         ON DELETE SET NULL
 );

@@ -1,10 +1,10 @@
 CREATE TABLE revision_history (
-    revisionId INT AUTO_INCREMENT PRIMARY KEY,
-    relatedUpdateId INT NOT NULL,
+    revision_Id INT AUTO_INCREMENT PRIMARY KEY,
+    relatedUpdate_Id INT NOT NULL,
     revisionDate DATETIME DEFAULT CURRENT_TIMESTAMP,
     description TEXT,
-    FOREIGN KEY (relatedUpdateId)
-        REFERENCES information_update(updateId)
+    FOREIGN KEY (relatedUpdate_Id)
+        REFERENCES information_update(relatedUpdate_Id)
         ON UPDATE CASCADE
         ON DELETE CASCADE
 );

@@ -1,12 +1,11 @@
 CREATE TABLE office (
-    officeId VARCHAR(20) PRIMARY KEY,
-    buildingId VARCHAR(20) NOT NULL,
+    office_Id VARCHAR(20) PRIMARY KEY,
+    building_Id VARCHAR(20) NOT NULL,
     name VARCHAR(150) NOT NULL,
     description TEXT,
     floor VARCHAR(50),
-    coordinates VARCHAR(255),
-    FOREIGN KEY (buildingId)
-        REFERENCES building(buildingId)
+    FOREIGN KEY (building_Id)
+        REFERENCES building(building_Id)
         ON UPDATE CASCADE
         ON DELETE CASCADE
 );

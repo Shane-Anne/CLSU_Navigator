@@ -1,6 +1,6 @@
 CREATE TABLE access_permission (
-    permissionId INT AUTO_INCREMENT PRIMARY KEY,
-    userId INT NOT NULL,
+    permission_Id INT AUTO_INCREMENT PRIMARY KEY,
+    user_Id INT NOT NULL,
     accessLevel ENUM(
         'View',
         'Create',
@@ -8,8 +8,8 @@ CREATE TABLE access_permission (
         'Delete',
         'Full'
     ) NOT NULL,
-    FOREIGN KEY (userId)
-        REFERENCES user(userId)
+    FOREIGN KEY (user_Id)
+        REFERENCES user(user_Id)
         ON UPDATE CASCADE
         ON DELETE CASCADE
 );

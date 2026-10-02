@@ -1,5 +1,5 @@
 CREATE TABLE user (
-    userId INT AUTO_INCREMENT PRIMARY KEY,
+    user_Id INT AUTO_INCREMENT PRIMARY KEY,
     userType ENUM(
         'Guest',
         'Student',

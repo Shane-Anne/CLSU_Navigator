@@ -1,13 +1,12 @@
 CREATE TABLE digital_floor_plan (
-    planId INT AUTO_INCREMENT PRIMARY KEY,
-    buildingId INT NOT NULL,
+    plan_Id INT AUTO_INCREMENT PRIMARY KEY,
+    building_Id INT NOT NULL,
     fileLocation VARCHAR(500) NOT NULL,
     createdDate DATETIME DEFAULT CURRENT_TIMESTAMP,
-    updatedDate DATETIME DEFAULT CURRENT_TIMESTAMP
-        ON UPDATE CURRENT_TIMESTAMP,
+    updatedDate DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     version VARCHAR(50),
-    FOREIGN KEY (buildingId)
-        REFERENCES building(buildingId)
+    FOREIGN KEY (building_Id)
+        REFERENCES building(building_Id)
         ON UPDATE CASCADE
         ON DELETE CASCADE
 );
