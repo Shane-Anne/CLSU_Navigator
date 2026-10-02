@@ -4,7 +4,6 @@ CREATE TABLE facility (
     name VARCHAR(150) NOT NULL,
     type VARCHAR(100),
     description TEXT,
-    location VARCHAR(255),
     FOREIGN KEY (building_Id)
         REFERENCES building(building_Id)
         ON UPDATE CASCADE

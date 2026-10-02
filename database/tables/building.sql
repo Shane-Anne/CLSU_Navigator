@@ -3,7 +3,7 @@ CREATE TABLE building (
     college_Id VARCHAR(20),
     name VARCHAR(150) NOT NULL,
     description TEXT,
-    location VARCHAR(255),
+    address VARCHAR(255),
     FOREIGN KEY (college_Id)
         REFERENCES college(college_Id)
         ON UPDATE CASCADE

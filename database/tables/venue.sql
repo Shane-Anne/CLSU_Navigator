@@ -3,7 +3,6 @@ CREATE TABLE venue (
     building_Id INT NULL,
     name VARCHAR(150) NOT NULL,
     description TEXT,
-    location VARCHAR(255),
     FOREIGN KEY (building_Id)
         REFERENCES building(building_Id)
         ON UPDATE CASCADE
